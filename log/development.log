@@ -1,0 +1,279 @@
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:29:13 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:29:46 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:29:47 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:29:47 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:29:47 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:37:36 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:40:03 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:40:04 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:40:04 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:40:04 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 15:47:40 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:47:47 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:28 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:29 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:29 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:29 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:29 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:30 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:30 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:30 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:30 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:30 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:31 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:48:31 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 15:53:31 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 15:56:41 -0700
+
+
+Started GET "/widget?token=bdf6c02c44aceb782d73868fc96bc764af7ec730d98ec3cadb23db75e91b1c696728e7977296b03e2928cb2a5e46f7beb021a0b71c0e12d315784078f1470e98" for 127.0.0.1 at 2014-10-03 16:02:01 -0700
+
+
+Started GET "/widget?access_token=bdf6c02c44aceb782d73868fc96bc764af7ec730d98ec3cadb23db75e91b1c696728e7977296b03e2928cb2a5e46f7beb021a0b71c0e12d315784078f1470e98" for 127.0.0.1 at 2014-10-03 16:03:42 -0700
+
+
+Started GET "/widget?token=bdf6c02c44aceb782d73868fc96bc764af7ec730d98ec3cadb23db75e91b1c696728e7977296b03e2928cb2a5e46f7beb021a0b71c0e12d315784078f1470e98" for 127.0.0.1 at 2014-10-03 16:03:50 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:03:51 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:20 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:21 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:21 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:21 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:21 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:22 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:27:22 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:15 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:15 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:15 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:16 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:16 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:16 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:40:16 -0700
+
+
+Started GET "/widget" for 127.0.0.1 at 2014-10-03 16:41:11 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:41:15 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:43:07 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:43:20 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:47:06 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:47:06 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:47:06 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:47:07 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:47:07 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:50:39 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:21 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:21 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:21 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:21 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:22 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:33 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:53:35 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:46 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:48 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:49 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:49 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:49 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 16:54:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 20:21:39 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 20:21:46 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 20:27:54 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 20:27:55 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-03 20:27:59 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:11:37 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:21:58 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:32:56 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:32:57 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:32:59 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:37 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:38 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:38 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:39 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:39 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:39 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:33:39 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:34:01 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:34:19 -0700
+Connecting to database specified by database.yml
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:34:20 -0700
+
+
+Started GET "/settings" for 127.0.0.1 at 2014-10-06 09:59:59 -0700
+Connecting to database specified by database.yml

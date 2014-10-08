@@ -5,7 +5,8 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -30,7 +31,8 @@ gem 'wix-apps'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+#gem 'unicorn'
+gem "unicorn-rails"
 
 # Deploy with Capistrano
 # gem 'capistrano'
