@@ -4,5 +4,5 @@
 # Examples:
 #
 	
-	#Settings.create([{ foo: 'bar' }])
+	Settings.create([{ foo: 'bar' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
