@@ -4,5 +4,5 @@
 # Examples:
 #
 	
-	Settings.create([{ key: 'value' }])
+	Settings.create([{ key: 'key' }, {value: 'value'}, {id: '1'}])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
