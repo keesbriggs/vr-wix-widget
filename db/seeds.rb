@@ -4,4 +4,4 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-   Settings.create(foo: 'bar')
+   Setting.create(foo: 'bar')

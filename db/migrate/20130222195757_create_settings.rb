@@ -5,6 +5,7 @@ class CreateSettings < ActiveRecord::Migration
     		:string, :null => true
     	t.column :value,
     		:text, :null => true
+    	t.timestamps		
     end
   end
 end
