@@ -14,7 +14,7 @@ class AppController < ActionController::Base
   end
   
   def settingsupdate
-    @settings = Settings.find(@key)
+    @settings = Settings.find_or_create_by_key(@key)
     @settings.update_attributes(:value => params[:settings])
     
     render :json => {}, :status => 200
