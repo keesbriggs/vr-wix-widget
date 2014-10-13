@@ -9,27 +9,7 @@
 
 <div class="widget-body">
 
-<form action='#' method='post'>
-<div class='suf-error' style="display: none;">
-Please correct the indicated fields.
-</div>
-<div class='suf-fields'>
-<ul>
-<li id='field_email_address'>
-<label class='title'>
-Email Address
-<span class='required title'>
-*
-</span>
-</label>
-<input name='contact[email_address]' type='text'>
-</li>
-</ul>
-</div>
-<div class='suf-submit'>
-<button>Sign Up</button>
-</div>
-</form>
+
 
 
     <div class="widget-header">
@@ -43,6 +23,35 @@ Email Address
 <script id="feed" type="text/x-handlebars-template">
     <a class="entry-link" href="{{link}}" target="_blank">
         <div class="feed">
+
+
+        <!-- BEGIN EMAIL FORM ADDS - KEES -->
+
+        <form action='#' method='post'>
+            <div class='suf-error' style="display: none;">
+                Please correct the indicated fields.
+            </div>
+            <div class='suf-fields'>
+                <ul>
+                    <li id='field_email_address'>
+                        <label class='title'>
+                            Email Address
+                            <span class='required title'>
+                                *
+                            </span>
+                        </label>
+                        <input name='contact[email_address]' type='text'>
+                    </li>
+                </ul>
+            </div>
+            <div class='suf-submit'>
+                <button>Sign Up</button>
+            </div>
+        </form>
+
+        <!-- END EMAIL FORM ADDS - KEES -->
+
+
             <div class="title">{{title}}</div>
             <div class="content"><p>{{content}}</p></div>
         </div>
@@ -58,6 +67,6 @@ Email Address
 <script type="text/javascript" src="/js/handlebars.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
 <script type="text/javascript" src="/external_modules/scrollbar/js/jquery.tinyscrollbar.js"></script>
-<script type="text/javascript" src="/js/rss.widget.js"></script>
+<!--script type="text/javascript" src="/js/rss.widget.js"></script-->
 </body>
 </html>
