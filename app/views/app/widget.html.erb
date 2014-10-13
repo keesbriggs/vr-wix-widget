@@ -8,6 +8,18 @@
 <body>
 
 <div class="widget-body">
+    <div class="widget-header">
+        <div class="main-title" id="feedTitle"></div>
+    </div>
+    <div class="overview">
+        <div class="feed-container" id="feedEntries"></div>
+    </div>
+</div>
+
+<script id="feed" type="text/x-handlebars-template">
+    <a class="entry-link" href="{{link}}" target="_blank">
+        <div class="feed">
+
 
 <form action='#' method='post'>
 <div class='suf-error' style="display: none;">
@@ -32,17 +44,6 @@ Email Address
 </form>
 
 
-    <div class="widget-header">
-        <div class="main-title" id="feedTitle"></div>
-    </div>
-    <div class="overview">
-        <div class="feed-container" id="feedEntries"></div>
-    </div>
-</div>
-
-<script id="feed" type="text/x-handlebars-template">
-    <a class="entry-link" href="{{link}}" target="_blank">
-        <div class="feed">
             <div class="title">{{title}}</div>
             <div class="content"><p>{{content}}</p></div>
         </div>
