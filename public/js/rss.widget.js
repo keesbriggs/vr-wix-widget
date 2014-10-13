@@ -40,12 +40,13 @@ var _rssWidget = (function() {
         // Sets the result format
         feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
 
-        feed.load(function(result) {
-            if (!result.error) {
-                setFeedTitle(result.feed.title);
-                setFeed(result.feed.entries);
-            }
-        });
+        // KEES DISABLED THIS NEXT BLOCK
+        // feed.load(function(result) {
+        //     if (!result.error) {
+        //         setFeedTitle(result.feed.title);
+        //         setFeed(result.feed.entries);
+        //     }
+        // });
     }
 
     /**
