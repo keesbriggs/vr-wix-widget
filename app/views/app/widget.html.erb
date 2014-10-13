@@ -8,22 +8,9 @@
 <body>
 
 <div class="widget-body">
-
-
-
-
     <div class="widget-header">
         <div class="main-title" id="feedTitle"></div>
     </div>
-    <div class="overview">
-        <div class="feed-container" id="feedEntries"></div>
-    </div>
-</div>
-
-<script id="feed" type="text/x-handlebars-template">
-    <a class="entry-link" href="{{link}}" target="_blank">
-        <div class="feed">
-
 
         <!-- BEGIN EMAIL FORM ADDS - KEES -->
 
@@ -34,9 +21,9 @@
             <div class='suf-fields'>
                 <ul>
                     <li id='field_email_address'>
-                        <label class='title'>
+                        <label class='feedEntries'>
                             Email Address
-                            <span class='required title'>
+                            <span class='feedEntries'>
                                 *
                             </span>
                         </label>
@@ -52,11 +39,21 @@
         <!-- END EMAIL FORM ADDS - KEES -->
 
 
+    
+    <!-- <div class="overview">
+        <div class="feed-container" id="feedEntries"></div>
+    </div> -->
+</div>
+
+<!--script id="feed" type="text/x-handlebars-template">
+    <a class="entry-link" href="{{link}}" target="_blank">
+        <div class="feed">
+
             <div class="title">{{title}}</div>
             <div class="content"><p>{{content}}</p></div>
         </div>
     </a>
-</script>
+</script-->
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;

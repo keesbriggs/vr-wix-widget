@@ -6,8 +6,10 @@ var _rssWidget = (function() {
     // Property for containing widget elements
     var sp = {
         widgetBody: $('.widget-body'),
-        feedElement: $('#feedEntries'),
-        title : $('#feedTitle'),
+        //feedElement: $('#feedEntries'),
+        feedElement: $('.feedEntries'),
+        //title : $('#feedTitle'),
+        title : $('.feedTitle'),
         scroll : $('#scrollbar1'),
         defaultURL : "http://rss.cnn.com/rss/edition.rss"
     }
