@@ -6,10 +6,9 @@ var _rssWidget = (function() {
     // Property for containing widget elements
     var sp = {
         widgetBody: $('.widget-body'),
-        //feedElement: $('#feedEntries'),
-        feedElement: $('.feedEntries'),
-        //title : $('#feedTitle'),
-        title : $('.feedTitle'),
+        feedElement: $('#feedEntries'),
+        feedElements: $('.feedElements'),
+        title : $('#feedTitle'),
         scroll : $('#scrollbar1'),
         defaultURL : "http://rss.cnn.com/rss/edition.rss"
     }
@@ -45,7 +44,7 @@ var _rssWidget = (function() {
         feed.load(function(result) {
             if (!result.error) {
                 setFeedTitle(result.feed.title);
-                //setFeed(result.feed.entries);  // KEES DISABLED.
+                setFeed(result.feed.entries);  
             }
         });
     }
@@ -90,10 +89,12 @@ var _rssWidget = (function() {
             });
 
             // append compiled template
-            $('#feedEntries').append(newFeed);
+            // $('#feedEntries').append(newFeed); // KEES DISABLED
         }
 
         $(".feed").css('color', rssModel.settings.textColor);
+
+        $(".feedElements").css('color', rssModel.settings.textColor); // KEES ADDED
 
         // Remove the border from the last feed class element
         $(".feed:last").css('border-bottom', 'none');
