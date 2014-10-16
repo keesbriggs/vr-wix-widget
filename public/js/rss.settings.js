@@ -119,8 +119,10 @@ function callVROauth() {
     var redirect_uri = "https://vr-wix-widget.herokuapp.com/auth";
 
     $.get({
-      "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + 
-      "&redirect_uri=" + redirect_uri;
+      "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri,
+      function(data){
+        console.log(data);
+      }
     });
 }
 
