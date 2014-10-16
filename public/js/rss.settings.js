@@ -125,7 +125,7 @@ function callVROauth() {
       crossDomain: true,
       success: function(data){
         console.log(data);
-      };
+      }
     });
 }
 
