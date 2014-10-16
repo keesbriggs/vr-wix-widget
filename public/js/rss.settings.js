@@ -115,7 +115,7 @@ function bindEvents () {
 }
 
 function callVROauth() {
-    var wix_app_key = "139aadd7-8703-adde-c4f9-afbb8c7bd505";
+    var api_app_key = "bruvqhpp3rsp7fwr9vysc8yz";
     var wix_redirect_uri = "https://www.myapp.com/api/v1/oauth/connect";
 
     $.ajax({
@@ -272,6 +272,11 @@ function loadSettings() {
         initPlugins();
 
         initInputElms();
+
+        $('#connectBtn').click(function(event) {
+           callVROauth();
+           event.preventDefault(); 
+        });
     })
 }
 
