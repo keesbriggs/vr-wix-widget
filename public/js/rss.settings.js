@@ -114,6 +114,21 @@ function bindEvents () {
     });
 }
 
+function callVROauth() {
+    var wix_app_key = "139aadd7-8703-adde-c4f9-afbb8c7bd505";
+    var wix_redirect_uri = "https://www.myapp.com/api/v1/oauth/connect";
+
+    $.ajax({
+      url: "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + wix_app_key + 
+      "&redirect_uri=" + wix_redirect_uri,
+      dataType: 'json',
+      crossDomain: true,
+      success: _(function(data){
+        console.log(data);
+      })
+    });
+}
+
 /**
  * Display a header in the settings form
  * If a user is connected to the widget (inserted a RSS feed link) the user section will be displayed,
