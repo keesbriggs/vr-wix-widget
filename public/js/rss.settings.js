@@ -123,9 +123,9 @@ function callVROauth() {
       "&redirect_uri=" + redirect_uri,
       dataType: 'json',
       crossDomain: true,
-      success: _(function(data){
+      success: function(data){
         console.log(data);
-      })
+      };
     });
 }
 
