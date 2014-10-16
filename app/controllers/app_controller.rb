@@ -19,7 +19,14 @@ class AppController < ActionController::Base
     
     render :json => {}, :status => 200
   end
-  
+
+  def auth_code
+    @auth_code = params[:auth_code]
+  end
+
+  def access_token
+  end
+
   private
 
   def require_instance

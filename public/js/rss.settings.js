@@ -115,12 +115,12 @@ function bindEvents () {
 }
 
 function callVROauth() {
-    var api_app_key = "bruvqhpp3rsp7fwr9vysc8yz";
-    var wix_redirect_uri = "https://www.myapp.com/api/v1/oauth/connect";
+    var app_key = "bruvqhpp3rsp7fwr9vysc8yz";
+    var redirect_uri = "https://vr-wix-widget.herokuapp.com/auth";
 
     $.ajax({
-      url: "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + wix_app_key + 
-      "&redirect_uri=" + wix_redirect_uri,
+      url: "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + 
+      "&redirect_uri=" + redirect_uri,
       dataType: 'json',
       crossDomain: true,
       success: _(function(data){
@@ -274,8 +274,9 @@ function loadSettings() {
         initInputElms();
 
         $('#connectBtn').click(function(event) {
-           callVROauth();
+           response = callVROauth();
            event.preventDefault(); 
+           console.log("KEES: response is " + response);
         });
     })
 }
