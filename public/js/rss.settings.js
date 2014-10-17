@@ -114,13 +114,13 @@ function bindEvents () {
     });
 }
 
-function callVROauth() {
-    var app_key = "bruvqhpp3rsp7fwr9vysc8yz";
-    var redirect_uri = "https://vr-wix-widget.herokuapp.com/auth";
-    var url = "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri;
+// function callVROauth() {
+//     var app_key = "bruvqhpp3rsp7fwr9vysc8yz";
+//     var redirect_uri = "https://vr-wix-widget.herokuapp.com/auth";
+//     var url = "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri;
 
-    $.get(url);
-}
+//     $.get(url);
+// }
 
 /**
  * Display a header in the settings form
@@ -266,11 +266,11 @@ function loadSettings() {
 
         initInputElms();
 
-        $('#connectBtn').click(function(event) {
-           response = callVROauth();
-           event.preventDefault(); 
-           console.log("KEES: response is " + response);
-        });
+        // $('#connectBtn').click(function(event) {
+        //    response = callVROauth();
+        //    event.preventDefault(); 
+        //    console.log("KEES: response is " + response);
+        // });
     })
 }
 
