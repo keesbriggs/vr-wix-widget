@@ -20,8 +20,10 @@ class AppController < ActionController::Base
     render :json => {}, :status => 200
   end
 
-  def auth_code
-    @auth_code = params[:auth_code]
+  def auth
+    @auth_code = params[:code]
+    @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=abcdh2wvxxdrw5zanb6wryhc&client_secret=abbcRjmGDCYqRGuyWAs5yJ4C&redirect_uri=https://www.myapp.com/api/v1/oauth/connect&code=#{@auth_code}"
+    redirect_to post_url(@post), status: 302
   end
 
   def access_token
