@@ -104,13 +104,6 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    var newSettings = <%= @settings %>;
-    $(function(){
-        console.log("KEES: Wix.Utils.getOrigCompId() is " + Wix.Utils.getOrigCompId());
-    });
-</script>
-
 <!-- Wix SDK -->
 <script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js"></script>
 
@@ -133,6 +126,13 @@
 <!-- Settings View Logic -->
 <script type="text/javascript" src="/js/common.js"></script>
 <script type="text/javascript" src="/js/rss.settings.js"></script>
+
+<script type="text/javascript">
+    var newSettings = <%= @settings %>;
+    $(function(){
+        console.log("KEES: Wix.Utils.getOrigCompId() is " + Wix.Utils.getOrigCompId());
+    });
+</script>
 
 </body>
 </html>
