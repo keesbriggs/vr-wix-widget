@@ -9,6 +9,12 @@ class AppController < ActionController::Base
   end
   
   def settings
+    if params[:code]
+      # we need to return to this page as other pages are unauthorized.
+      @auth_code = params[:code]
+      @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=abcdh2wvxxdrw5zanb6wryhc&client_secret=abbcRjmGDCYqRGuyWAs5yJ4C&redirect_uri=https://vr-wix-widget.herokuapp.com/settings&code=#{@auth_code}"
+      redirect_to post_url(@post), status: 302
+    end
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
@@ -18,15 +24,6 @@ class AppController < ActionController::Base
     @settings.update_attributes(:value => params[:settings])
     
     render :json => {}, :status => 200
-  end
-
-  def auth
-    @auth_code = params[:code]
-    @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=abcdh2wvxxdrw5zanb6wryhc&client_secret=abbcRjmGDCYqRGuyWAs5yJ4C&redirect_uri=https://www.myapp.com/api/v1/oauth/connect&code=#{@auth_code}"
-    redirect_to post_url(@post), status: 302
-  end
-
-  def access_token
   end
 
   private
