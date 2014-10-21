@@ -9,6 +9,7 @@ class AppController < ActionController::Base
   end
   
   def settings
+    puts "KEES: inside #settings - params are #{params.inspect}"
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
