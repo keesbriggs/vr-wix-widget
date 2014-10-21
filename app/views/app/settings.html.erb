@@ -129,10 +129,10 @@
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
-    $(function(){
-        var compId = Wix.Utils.getOrigCompId());
-        console.log("KEES: Wix.Utils.getOrigCompId() is " + compId);
 
+    $(document).ready(function() {
+        var compId = Wix.Utils.getOrigCompId();
+        console.log("KEES: Wix.Utils.getOrigCompId() is " + compId);
     });
 </script>
 
