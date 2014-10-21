@@ -22,16 +22,6 @@
         <div class="divider"></div>
     </div>
 
-<!-- jQuery; needed for Twitter Bootstrap -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        var compId = Wix.Utils.getOrigCompId();
-        console.log("KEES: Wix.Utils.getOrigCompId() is " + compId);
-    });
-</script>
-
     <!-- Connect account area -->
     <div class="login">
         <div class="guest">
@@ -43,7 +33,7 @@
             <div id="feedSignIn" class="login-panel">
                 <!--p class="feed-label">Enter your your RSS URL</p-->
                 <!--input type="text" name="rss-feed-url" id="rssFeedUrl" placeholder="http://rss.cnn.com/rss/edition.rss"/-->
-                <button class="submit btn connect" id="connectBtn" onclick="window.location='https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=bruvqhpp3rsp7fwr9vysc8yz&redirect_uri=http://vr-wix-widget.herokuapp.com/settings?compId=" + compId + "'">Connect to VR</button>
+                <button class="submit btn connect" id="connectBtn" onclick="window.location='https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=bruvqhpp3rsp7fwr9vysc8yz&redirect_uri=http://editor.wix.com/html/editor/web/renderer/new?siteId=92f4869b-53e4-4b9c-8fe7-f6ba6967848b'">Connect to VR</button>
             </div>
         </div>
 
@@ -117,7 +107,8 @@
 <!-- Wix SDK -->
 <script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js"></script>
 
-
+<!-- jQuery; needed for Twitter Bootstrap -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <!-- Twitter Bootstrap components;
      include this to utilize the Color Pickers, based on Tooltip and Popover -->
