@@ -8,6 +8,8 @@ RssFeedRails::Application.routes.draw do
 
   match '/app/settingsupdate' => "app#settingsupdate"
 
+  match "/oauth" => "oauth#authenticate"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
