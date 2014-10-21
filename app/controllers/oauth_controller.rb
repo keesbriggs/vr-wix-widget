@@ -1,6 +1,7 @@
 class OauthController < ActionController::Base
 
   def authenticate
+  	puts "KEES: inside #authenticate - params are #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
       @auth_code = params[:code]
