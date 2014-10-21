@@ -251,6 +251,8 @@ function loadSettings() {
 
         window.rssModel = {};
 
+        window.compId = Wix.Utils.getOrigCompId();
+
         // Getting newSettings that was set as parameter in settings.vm
         // Check that newSettings is initialized with value
         rssModel.settings = !!newSettings ? newSettings : {};
