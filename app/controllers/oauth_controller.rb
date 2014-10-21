@@ -7,7 +7,7 @@ class OauthController < ActionController::Base
       puts "KEES: @auth_code is #{@auth_code}"
       @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=abcdh2wvxxdrw5zanb6wryhc&client_secret=abbcRjmGDCYqRGuyWAs5yJ4C&redirect_uri=https://vr-wix-widget.herokuapp.com/settings?&code=#{@auth_code}"
       puts "KEES: redirecting to #{@post}"
-      redirect_to post_url(@post), status: 302
+      redirect_to @post, status: 302
     end
   end
 end
