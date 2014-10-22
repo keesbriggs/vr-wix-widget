@@ -122,7 +122,7 @@ function callVROauth() {
     var onClose = function(message) { console.log("popup closed", message) };
     console.log("KEES: inside callVROauth... about to open popup");
     //Wix.openPopup(url, 400, 400, position, onClose);
-    window.open("authorize", url, "width=400, height=400, left=200, top=200");
+    window.open(url, "authorize" "width=400, height=400, left=200, top=200");
     console.log("KEES: popup opened");
     //$.get(url);
 }
