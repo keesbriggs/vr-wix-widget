@@ -121,7 +121,8 @@ function callVROauth() {
     var position =  {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER};
     var onClose = function(message) { console.log("popup closed", message) };
     console.log("KEES: inside callVROauth... about to open popup");
-    Wix.openPopup(url, 400, 400, position, onClose);
+    //Wix.openPopup(url, 400, 400, position, onClose);
+    window.open(url, 400, 400, position, onClose);
     console.log("KEES: popup opened");
     //$.get(url);
 }
