@@ -120,8 +120,9 @@ function callVROauth() {
     var url = "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri;
     var position =  {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER};
     var onClose = function(message) { console.log("popup closed", message) };
- 
+    console.log("KEES: inside callVROauth... about to open popup");
     Wix.openPopup(url, 400, 400, position, onClose);
+    console.log("KEES: popup opened");
     //$.get(url);
 }
 
@@ -272,9 +273,8 @@ function loadSettings() {
         initInputElms();
 
         $('#connectBtn').click(function(event) {
-           response = callVROauth();
+           callVROauth();
            event.preventDefault(); 
-           console.log("KEES: response is " + response);
         });
     })
 }
