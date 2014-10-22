@@ -11,6 +11,7 @@ class AppController < ActionController::Base
   def settings
     puts "KEES: @key is #{@key.inspect}"
     puts "KEES: inside #settings - params are #{params.inspect}"
+    @instance = params[:instance]
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
