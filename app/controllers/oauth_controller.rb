@@ -16,13 +16,5 @@ class OauthController < ActionController::Base
     end
   end
 
-  def savetoken
-  	puts "KEES: inside #savetoken - params are #{params.inspect}"
-    @settings = Settings.find_by_key(@key)
-    puts "KEES: @settings is #{@settings.inspect}"
-    value = @settings.value
-    value = value.merge! params[:code] 
-    @settings.update_attributes(:value => value)
-    @settings = value.html_safe
-  end
+  
 end

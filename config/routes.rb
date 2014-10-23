@@ -8,7 +8,7 @@ RssFeedRails::Application.routes.draw do
 
   match '/app/settingsupdate' => "app#settingsupdate"
 
-  match "/oauth" => "oauth#authenticate"
+  match "/oauth" => "app#authenticate"
 
   match "/savetoken" => "app#savetoken"
 
