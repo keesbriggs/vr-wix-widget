@@ -36,7 +36,14 @@
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
-    setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 1000);
+    $.ajax({
+  		type: "POST",
+  		url: #{@post},
+  		data: #{auth_code},
+  		success: function() {console.log("KEES: post to access token successful")},
+  		dataType: json
+	});
+    setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
 </script>
 
 </body>

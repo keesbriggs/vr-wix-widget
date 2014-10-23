@@ -9,8 +9,6 @@ def savetoken
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" # IF THIS IS THE WRONG SECRET THEN HOW DO I GET THE RIGHT ONE???
       @auth_code = params[:code]
       @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=#{client_id}&client_secret=#{client_secret}&code=#{@auth_code}&redirect_uri=https://vr-wix-widget.herokuapp.com/savetoken"
-      puts "KEES: redirecting to #{@post}"
-      redirect_to @post, status: 302
     end
   end  
 end
