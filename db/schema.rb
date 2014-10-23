@@ -11,11 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222195757) do
+ActiveRecord::Schema.define(:version => 20141023170136) do
 
   create_table "settings", :force => true do |t|
     t.string "key"
     t.text   "value"
+    t.text   "instance"
   end
 
 end
