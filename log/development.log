@@ -291,3 +291,8 @@ Migrating to AddInstanceToSettings (20141023170136)
   [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141023170136')
   [1m[36m (122.5ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateSettings (20130222195757)
+Migrating to AddInstanceToSettings (20141023170136)
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
