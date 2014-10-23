@@ -120,10 +120,8 @@ function callVROauth() {
     var url = "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri;
     var position =  {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER};
     var onClose = function(message) { console.log("popup closed", message) };
-    console.log("KEES: inside callVROauth... about to open popup");
     //Wix.openPopup(url, 400, 400, position, onClose);
     window.open(url, "_authorize", "width=600, height=600, left=200, top=200", onClose);
-    console.log("KEES: popup opened");
     //$.get(url);
 }
 
