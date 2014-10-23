@@ -22,7 +22,7 @@ class AppController < ActionController::Base
   def settingsupdate
     puts "KEES: inside settingsupdate - params are #{params.inspect}"
     @settings = Settings.find_or_create_by_key(@key)
-    @settings.update_attributes(:value => params[:settings], :instance => params[:instance].to_s)
+    @settings.update_attributes(:value => params[:settings], :instance => "test")
     puts "KEES: inside settingsupdate - params[:instance] is #{params[:instance].inspect}"
     @settings.save!
     puts "KEES: inside settingsupdate - @settings.instance is #{@settings.instance.inspect}"
