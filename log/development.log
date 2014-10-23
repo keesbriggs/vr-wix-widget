@@ -296,3 +296,12 @@ Connecting to database specified by database.yml
 Migrating to CreateSettings (20130222195757)
 Migrating to AddInstanceToSettings (20141023170136)
   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddInstanceToSettings (20141023170136)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (31.3ms)[0m  ALTER TABLE "settings" DROP "instance"
+  [1m[36m (2.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20141023170136'[0m
+  [1m[35m (114.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
