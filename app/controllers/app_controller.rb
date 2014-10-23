@@ -1,6 +1,7 @@
 class AppController < ActionController::Base
 
-  #skip_before_filter :require_instance, :only => :authenticate
+  skip_before_filter :require_instance, :only => :authenticate
+  skip_before_filter :get_request_key, :only => :authenticate
 
   before_filter :require_instance
   before_filter :get_request_key
@@ -25,26 +26,24 @@ class AppController < ActionController::Base
     render :json => {}, :status => 200
   end
 
-  def savetoken
-    puts "KEES: inside #savetoken - params are #{params.inspect}"
-    #@settings = Settings.find_by_key(@key)
-    puts "KEES: @settings is #{@settings.inspect}"
-    value = @settings.value
-    value = value.merge! params[:code] 
-    @settings.update_attributes(:value => value)
-    @settings = value.html_safe
-  end
+  # def savetoken
+  #   puts "KEES: inside #savetoken - params are #{params.inspect}"
+  #   #@settings = Settings.find_by_key(@key)
+  #   puts "KEES: @settings is #{@settings.inspect}"
+  #   value = @settings.value
+  #   value = value.merge! params[:code] 
+  #   @settings.update_attributes(:value => value)
+  #   @settings = value.html_safe
+  # end
 
-  def authenticate
+  def savetoken
 
     if params[:code]
-      puts "KEES: inside #authenticate - params are #{params.inspect}"
+      puts "KEES: inside #savetoken - params are #{params.inspect}"
       # we need to return to this page as other pages are unauthorized.
+      client_id = "139aadd7-8703-adde-c4f9-afbb8c7bd505"
+      client_secret = "c82ef042-6c35-4ed6-a438-84cdc2a7c119"
       @auth_code = params[:code]
-      instance = params[:instance].split('.')
-      client_id = @instance.first
-      client_secret = @instance.last
-      puts "KEES: @auth_code is #{@auth_code}"
       @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=#{client_id}&client_secret=#{client_secret}&redirect_uri=https://vr-wix-widget.herokuapp.com/savetoken?&code=#{@auth_code}"
       puts "KEES: redirecting to #{@post}"
       redirect_to @post, status: 302
