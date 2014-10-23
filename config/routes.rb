@@ -10,7 +10,7 @@ RssFeedRails::Application.routes.draw do
 
   match "/oauth" => "oauth#authenticate"
 
-  match "/savetoken" => "oauth#savetoken"
+  match "/savetoken" => "app#savetoken"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
