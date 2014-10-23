@@ -15,7 +15,10 @@ class AppController < ActionController::Base
     puts "KEES: @key is #{@key.inspect}"
     puts "KEES: inside #settings - params are #{params.inspect}"
     @instance = params[:instance]
-    value = Settings.find_or_create_by_key(@key).value || '{}'
+    @settings = Settings.find_or_create_by_key(@key)
+    value = settings.value || '{}'
+    value.merge! @instance
+    @settings.save!
     @settings = value.html_safe
   end
   
@@ -36,7 +39,7 @@ class AppController < ActionController::Base
   #   @settings = value.html_safe
   # end
 
-  
+
 
   private
 
