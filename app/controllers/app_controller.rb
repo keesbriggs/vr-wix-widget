@@ -23,14 +23,6 @@ class AppController < ActionController::Base
     render :json => {}, :status => 200
   end
 
-  def savetoken
-    @settings = Settings.find_by_key(@key)
-    value = @settings.value
-    value = value.merge! params[:code] 
-    @settings.update_attributes(:value => value)
-    @settings = value.html_safe
-  end
-
   private
 
   def require_instance

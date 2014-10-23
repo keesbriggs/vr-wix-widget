@@ -15,4 +15,13 @@ class OauthController < ActionController::Base
       redirect_to @post, status: 302
     end
   end
+
+  def savetoken
+  	puts "KEES: inside #savetoken - params are #{params.inspect}"
+    @settings = Settings.find_by_key(@key)
+    value = @settings.value
+    value = value.merge! params[:code] 
+    @settings.update_attributes(:value => value)
+    @settings = value.html_safe
+  end
 end
