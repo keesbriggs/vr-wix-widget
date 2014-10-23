@@ -15,14 +15,12 @@ class AppController < ActionController::Base
     puts "KEES: @key is #{@key.inspect}"
     puts "KEES: inside #settings - params are #{params.inspect}"
     @instance = params[:instance]
-    @settings = Settings.find_or_create_by_key(@key)
-    value = settings.value || '{}'
-    value.merge! @instance
-    @settings.save!
+    value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
   
   def settingsupdate
+    puts "KEES: inside settingsupdate - params are #{params.inspect}"
     @settings = Settings.find_or_create_by_key(@key)
     @settings.update_attributes(:value => params[:settings])
     
@@ -38,8 +36,6 @@ class AppController < ActionController::Base
   #   @settings.update_attributes(:value => value)
   #   @settings = value.html_safe
   # end
-
-
 
   private
 
