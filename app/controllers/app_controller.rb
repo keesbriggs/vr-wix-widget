@@ -37,7 +37,6 @@ class AppController < ActionController::Base
   # end
 
   def savetoken
-
     if params[:code]
       puts "KEES: inside #savetoken - params are #{params.inspect}"
       # we need to return to this page as other pages are unauthorized.
