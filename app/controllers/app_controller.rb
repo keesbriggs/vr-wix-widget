@@ -1,6 +1,6 @@
 class AppController < ActionController::Base
 
-  skip_before_filter :require_instance, :only => :savetoken
+  #skip_before_filter :require_instance, :only => :savetoken
 
   before_filter :require_instance
   before_filter :get_request_key
