@@ -22,9 +22,8 @@ class AppController < ActionController::Base
   def settingsupdate
     puts "KEES: inside settingsupdate - params are #{params.inspect}"
     @settings = Settings.find_or_create_by_key(@key)
-    @settings.update_attributes(:value => params[:settings])
+    @settings.update_attributes(:value => params[:settings], :instance => params[:instance].to_s)
     puts "KEES: inside settingsupdate - params[:instance] is #{params[:instance].inspect}"
-    @settings.update_attributes(:instance => params[:instance])
     @settings.save!
     puts "KEES: inside settingsupdate - @settings.instance is #{@settings.instance.inspect}"
     render :json => {}, :status => 200
