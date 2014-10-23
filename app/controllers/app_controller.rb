@@ -27,7 +27,7 @@ class AppController < ActionController::Base
 
   def savetoken
     puts "KEES: inside #savetoken - params are #{params.inspect}"
-    @settings = Settings.find_by_key(@key)
+    #@settings = Settings.find_by_key(@key)
     puts "KEES: @settings is #{@settings.inspect}"
     value = @settings.value
     value = value.merge! params[:code] 
