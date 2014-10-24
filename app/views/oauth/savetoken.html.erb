@@ -12,10 +12,10 @@
 <p>Thanks! returning to Wix.com...</p> 
 
 <!-- Wix SDK -->
-<script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js"></script>
+<script type="text/javascript" src="https://sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js"></script>
 
 <!-- jQuery; needed for Twitter Bootstrap -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <!-- Twitter Bootstrap components;
      include this to utilize the Color Pickers, based on Tooltip and Popover -->
@@ -35,14 +35,15 @@
 <script type="text/javascript" src="/js/rss.settings.js"></script>
 
 <script type="text/javascript">
-    var newSettings = <%= @settings %>;
+    console.log("KEES: hi.")
+    console.log("KEES: @post is <%= @post.inspect %>");
     $.ajax({
-  		type: "POST",
-  		url: #{@post},
-  		data: #{auth_code},
-  		success: function() {console.log("KEES: post to access token successful")},
-  		dataType: json
-	});
+      type: "POST",
+      url: #{@post},
+      data: data,
+      success: function(data) {console.log("KEES: post to access token successful - data is " + data)},
+      dataType: json
+  });
     setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
 </script>
 
