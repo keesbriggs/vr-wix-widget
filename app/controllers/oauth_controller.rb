@@ -7,8 +7,7 @@ def savetoken
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
-      puts "KEES: @auth_code is #{@auth_code.inspect}"
-      @post = "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=#{client_id}&client_secret=#{client_secret}&code=#{@auth_code}&redirect_uri=https://vr-wix-widget.herokuapp.com/savetoken"
+      redirect_to "https://vrapi.verticalresponse.com/api/v1/oauth/access_token?client_id=#{client_id}&client_secret=#{client_secret}&code=#{@auth_code}&redirect_uri=https://vr-wix-widget.herokuapp.com/savetoken", 302
     end
   end  
 end

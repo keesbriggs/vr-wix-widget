@@ -12,30 +12,17 @@ class AppController < ActionController::Base
   end
   
   def settings
-    puts "KEES: @key is #{@key.inspect}"
-    puts "KEES: inside #settings - params are #{params.inspect}"
     @instance = params[:instance]
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
   
   def settingsupdate
-    puts "KEES: inside settingsupdate - params are #{params.inspect}"
     @settings = Settings.find_or_create_by_key(@key)
     @settings.update_attributes(:value => params[:settings])
     
     render :json => {}, :status => 200
   end
-
-  # def savetoken
-  #   puts "KEES: inside #savetoken - params are #{params.inspect}"
-  #   #@settings = Settings.find_by_key(@key)
-  #   puts "KEES: @settings is #{@settings.inspect}"
-  #   value = @settings.value
-  #   value = value.merge! params[:code] 
-  #   @settings.update_attributes(:value => value)
-  #   @settings = value.html_safe
-  # end
 
   private
 
