@@ -36,6 +36,7 @@
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
+    console.log("KEES: @post is #{@post.inspect}");
     $.ajax({
   		type: "POST",
   		url: #{@post},
