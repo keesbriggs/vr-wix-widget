@@ -22,6 +22,7 @@
       type: "POST",
       headers: { 'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "Content-Type" },
       dataType: "jsonp",
+      contentType: 'application/json',
       url: "<%= @post.to_s %>",
   }).done(function() {
     setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
