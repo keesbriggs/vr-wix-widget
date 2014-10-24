@@ -18,14 +18,12 @@
 <script type="text/javascript" src="/wix-ui-lib/javascripts/bootstrap/bootstrap-popover.js"></script>
 
 <script type="text/javascript">
-    console.log("KEES: hi.")
-    console.log("KEES: @post is <%= @post.inspect %>");
     $.ajax({
-      type: "GET",
+      type: "POST",
+      headers: { 'Access-Control-Allow-Origin': '*' },
       dataType: "json",
       url: "<%= @post.to_s %>",
   }).done(function() {
-    console.log("KEES: @post is <%= @post.inspect %>");
     setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
   });
     
