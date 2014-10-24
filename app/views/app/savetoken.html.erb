@@ -37,14 +37,14 @@
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
     console.log("KEES: @post is #{@post.inspect}");
-    $.ajax({
-  		type: "POST",
-  		url: #{@post},
-  		data: data,
-  		success: function(data) {console.log("KEES: post to access token successful - data is " + data)},
-  		dataType: json
-	});
-    setTimeout(function(){ window.close() }, 3000);
+ //    $.ajax({
+ //  		type: "POST",
+ //  		url: #{@post},
+ //  		data: data,
+ //  		success: function(data) {console.log("KEES: post to access token successful - data is " + data)},
+ //  		dataType: json
+	// });
+    setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
 </script>
 
 </body>
