@@ -39,7 +39,7 @@
     console.log("KEES: @post is <%= @post.inspect %>");
     $.ajax({
       type: "POST",
-      url: <%= @post.to_s %>,
+      url: "<%= @post.to_s %>",
       data: data,
       success: function(data) {console.log("KEES: post to access token successful - data is " + data)},
       dataType: json
