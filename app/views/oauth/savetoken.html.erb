@@ -21,7 +21,7 @@
     $.ajax({
       type: "POST",
       headers: { 'Access-Control-Allow-Origin': '*' },
-      dataType: "json",
+      dataType: "jsonp",
       url: "<%= @post.to_s %>",
   }).done(function() {
     setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
