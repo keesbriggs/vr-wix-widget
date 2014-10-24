@@ -20,6 +20,7 @@
 <script type="text/javascript">
     $.ajax({
       type: "POST",
+      headers: { 'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "Content-Type" },
       dataType: "jsonp",
       url: "<%= @post.to_s %>",
   }).done(function() {
