@@ -22,6 +22,7 @@
     $.ajax({
       crossDomain: true,
       type: "post",
+      data: { "code": <%= @auth_code %>}
       dataType: "jsonp",
       url: "<%= @post %>",
       success: function(){
@@ -33,6 +34,5 @@
   });
     
 </script>
-
 </body>
 </html>
