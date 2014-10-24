@@ -39,6 +39,7 @@
     console.log("KEES: @post is <%= @post.inspect %>");
     $.ajax({
       type: "POST",
+      dataType: "json",
       url: "<%= @post.to_s %>",
   }).done(function() {
     console.log("KEES: @post is <%= @post.inspect %>");
