@@ -21,14 +21,14 @@
     $.ajax({
       crossDomain: true,
       type: "POST",
-      headers: { 'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "Content-Type" },
+      //headers: { 'Access-Control-Allow-Origin': '*', "Access-Control-Allow-Headers": "Content-Type" },
       dataType: "jsonp",
       async: false,
-      contentType: "application/json",
+      //contentType: "application/json",
       url: "<%= @post.to_s %>",
   }).done(function(data) {
     console.log("KEES: data is " + data);
-    setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
+    //setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
   });
     
 </script>
