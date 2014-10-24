@@ -21,8 +21,9 @@
     console.log("<%= @post %>");
     $.ajax({
       crossDomain: true,
-      type: "GET",
-      dataType: "json",
+      type: "post",
+      data: data,
+      dataType: "jsonp",
       async: false,
       url: "<%= @post %>",
   }).done(function(data) {
