@@ -27,8 +27,10 @@
       async: false,
       //contentType: "application/json",
       url: "<%= @post %>",
-  }).done(function(data) {
-    console.log("KEES: data is " + data);
+      success: function () { alert('it works, data is ' + data) }
+  });
+    //.done(function(data) {
+    //console.log("KEES: data is " + data);
     //setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
   });
     
