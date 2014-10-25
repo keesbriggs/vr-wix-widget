@@ -1,3 +1,5 @@
+require 'faraday'
+
 class OauthController < ActionController::Base
 
   def savetoken
