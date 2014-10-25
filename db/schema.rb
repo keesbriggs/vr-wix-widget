@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222195757) do
+ActiveRecord::Schema.define(:version => 20141025191703) do
 
   create_table "settings", :force => true do |t|
     t.string "key"
     t.text   "value"
+  end
+
+  create_table "user_access_token", :force => true do |t|
+    t.integer  "vr_user_id",   :null => false
+    t.string   "access_token", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end
