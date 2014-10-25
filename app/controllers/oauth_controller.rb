@@ -25,6 +25,7 @@ class OauthController < ActionController::Base
       }
 
       response_json = JSON.parse(response.body)
+      puts "KEES: response.body is #{response.body.inspect}"
       puts "KEES: response_json is #{response_json.inspect}"
       puts "KEES: response_json.class is #{response_json.class.inspect}"
       puts "KEES: response_json[:user_id] is #{response_json[:user_id].inspect}"
