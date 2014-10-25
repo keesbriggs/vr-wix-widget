@@ -23,7 +23,7 @@
       crossDomain: true,
       type: "post",
       data: { "code": <%= @auth_code %>}
-      dataType: "jsonp",
+      dataType: "json",
       url: "<%= @post %>",
       success: function(){
         self.close();
