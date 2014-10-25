@@ -17,7 +17,7 @@ class OauthController < ActionController::Base
         c.use Faraday::Adapter::NetHttp     # perform requests with Net::HTTP
       end
 
-      response = conn.post "/api/v1/oauth/access_token", { client_id: client_id, client_secret: client_secret, code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" 
+      response = conn.post "/api/v1/oauth/access_token", { client_id: client_id, client_secret: client_secret, code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" } 
       foo = JSON.parse(response.body)
 
       puts "KEES: foo is #{foo.inspect}"
