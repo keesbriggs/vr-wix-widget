@@ -28,7 +28,7 @@ class OauthController < ActionController::Base
       p "KEES: response_json.class is #{response_json.class.inspect}"
       p "KEES: response_json['user_id'] is #{response_json['user_id'].inspect}"
       p "KEES: response_json['access_token'] is #{response_json['access_token'].inspect}"
-      user = User.create({ vr_user_id: response_json[:user_id], access_token: response_json[:access_token] })
+      user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
     end
   end
 end
