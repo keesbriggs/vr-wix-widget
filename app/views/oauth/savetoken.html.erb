@@ -26,10 +26,10 @@
       dataType: "jsonp",
       url: "<%= @post %>",
       success: function(){
-          setTimeout(function(){ window.open("", "_authorize"); window.close("_authorize") }, 3000);
+        self.close();
       },
       error:function(jqxhr, textStatus, error){
-          alert("something went wrong: " + textStatus + "\n error" + error);
+        alert("something went wrong: " + textStatus + "\n error" + error);
       }   
   });
     
