@@ -34,6 +34,8 @@ gem 'wix-apps'
 #gem 'unicorn'
 gem "unicorn-rails"
 
+gem "faraday"
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
