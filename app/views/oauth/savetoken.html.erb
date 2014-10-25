@@ -22,7 +22,7 @@
     $.ajax({
       crossDomain: true,
       type: "post",
-      data: { "code": <%= @auth_code %>}
+      data: { "code": <%= @auth_code %>},
       dataType: "json",
       url: "<%= @post %>",
       success: function(){
