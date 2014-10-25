@@ -27,6 +27,8 @@ class OauthController < ActionController::Base
       puts "KEES: response_json is #{response_json.inspect}"
       puts "KEES: response_json[:user_id] is #{response_json[:user_id].inspect}"
       puts "KEES: response_json[:access_token] is #{response_json[:access_token].inspect}"
+      puts "KEES: response_json.user_id is #{response_json.user_id.inspect}"
+      puts "KEES: response_json.access_token is #{response_json.access_token.inspect}"
       user = User.create({ vr_user_id: response_json[:user_id], access_token: response_json[:access_token] })
     end
   end
