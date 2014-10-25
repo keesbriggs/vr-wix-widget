@@ -4,7 +4,6 @@ require 'json'
 class OauthController < ActionController::Base
 
   def savetoken
-    puts "KEES: params  is #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
 
@@ -23,13 +22,12 @@ class OauthController < ActionController::Base
         client_secret: client_secret, 
         code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" 
       }
-      puts "KEES: response.body is #{response.body.inspect}"
       response_json = JSON.parse(response.body)
 
       p "KEES: response_json is #{response_json.inspect}"
       p "KEES: response_json.class is #{response_json.class.inspect}"
-      p "KEES: response_json[:user_id] is #{response_json[:user_id].inspect}"
-      p "KEES: response_json[:access_token] is #{response_json[:access_token].inspect}"
+      p "KEES: response_json['user_id'] is #{response_json['user_id'].inspect}"
+      p "KEES: response_json['access_token'] is #{response_json['access_token'].inspect}"
       user = User.create({ vr_user_id: response_json[:user_id], access_token: response_json[:access_token] })
     end
   end
