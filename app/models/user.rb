@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
   
-  attr_accessible :user, :access_token
+  attr_accessible :vr_user_id, :access_token
 end
