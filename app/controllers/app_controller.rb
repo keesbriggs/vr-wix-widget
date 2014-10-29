@@ -39,13 +39,15 @@ class AppController < ActionController::Base
 
   def savetoken
 
-    puts "KEES: inside SAVETOKEN"
+    puts "KEES: inside SAVETOKEN - params are #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
 
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
+      widget = @widget 
+      puts "KEES: widget is #{widget.inspect}"
 
       conn = Faraday.new(:url => 'https://vrapi.verticalresponse.com') do |c|
         c.use Faraday::Request::UrlEncoded  
@@ -60,7 +62,7 @@ class AppController < ActionController::Base
       }
       response_json = JSON.parse(response.body)
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
-      @widget.update_attributes!(user_id: user.id)
+      @widget.update_attributes(user_id: user.id)
     end
   end
 
