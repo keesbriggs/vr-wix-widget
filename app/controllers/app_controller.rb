@@ -43,6 +43,7 @@ class AppController < ActionController::Base
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
       comp_id = params[:compId]
+      puts "KEES: comp_id is #{comp_id.inspect}"
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
