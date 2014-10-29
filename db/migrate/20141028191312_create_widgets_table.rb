@@ -2,8 +2,8 @@ class CreateWidgetsTable < ActiveRecord::Migration
   def change
   	create_table :widgets do |t|
       t.integer :user_id
-      t.string  :instance_id
-      t.string	:comp_id
+      t.string  :instance_id, null: false
+      t.string	:comp_id, null: false
 
       t.string  :widget_background_color
       t.string  :widget_height
