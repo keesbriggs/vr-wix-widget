@@ -60,6 +60,7 @@ class AppController < ActionController::Base
       }
       response_json = JSON.parse(response.body)
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
+      @widget.update_attributes!(user_id: user.id)
     end
   end
 
