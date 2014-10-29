@@ -28,14 +28,12 @@ class AppController < ActionController::Base
     # - is the user authenticated against oauth?
     # - if so, what are their contact lists?
     # - which contact list will the user want customers to sign up with
-
     #value = Settings.find_or_create_by_key(@key).value || '{}'
     #@settings = value.html_safe
 
     # Return the properties from the Widget class instead of Settings class
     # TODO: this needs testing on wix editor, upon failure replace with the couple of commented lines above
     value = Widget.find_or_create_by_comp_id_and_instance_id(@comp_id, @instance_id).to_json
-
 
     @settings = value.html_safe
   end
