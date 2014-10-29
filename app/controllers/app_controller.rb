@@ -38,6 +38,8 @@ class AppController < ActionController::Base
   end
 
   def savetoken
+
+    puts "KEES: inside SAVETOKEN"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
 
