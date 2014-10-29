@@ -3,12 +3,12 @@ require 'json'    # only necessary if savetoken method is present
 
 class AppController < ActionController::Base
 
+  before_filter :require_instance
+  before_filter :get_request_key
+
   skip_before_filter :require_instance, :only => :savetoken
   skip_before_filter :get_request_key, :only => :savetoken
 
-  before_filter :require_instance
-  before_filter :get_request_key
-  
   def widget
     # this loads first, before settings page.
     # let's create a widget object here.
