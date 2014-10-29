@@ -42,7 +42,7 @@ class AppController < ActionController::Base
     puts "KEES: inside SAVETOKEN - params are #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
-
+      comp_id = params[:compId]
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
@@ -58,7 +58,7 @@ class AppController < ActionController::Base
       response = conn.post "/api/v1/oauth/access_token", { 
         client_id: client_id, 
         client_secret: client_secret, 
-        code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" 
+        code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken?compId=#{comp_id}" 
       }
       response_json = JSON.parse(response.body)
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
