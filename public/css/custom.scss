@@ -1,0 +1,456 @@
+@charset "UTF-8";
+@mixin border-radius($x) {
+    -webkit-border-radius: $x;
+    -moz-border-radius: $x;
+    -ms-border-radius: $x;
+    -o-border-radius: $x;
+    border-radius: $x;
+}
+body {
+    color: #333;
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('../font/roboto-light-webfont.eot');
+    src: url('../font/roboto-light-webfont.eot?#iefix') format('embedded-opentype'), url('../font/roboto-light-webfont.woff') format('woff'), url('../font/roboto-light-webfont.ttf') format('truetype'), url('../font/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'brandon_light';
+    src: url('../font/brandon_light-webfont.eot');
+    src: url('../font/brandon_light-webfont.eot?#iefix') format('embedded-opentype'), url('../font/brandon_light-webfont.woff') format('woff'), url('../font/brandon_light-webfont.ttf') format('truetype'), url('../font/brandon_light-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'brandon_grotesque';
+    src: url('../font/brandon_reg-webfont.eot');
+    src: url('../font/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'), url('../font/brandon_reg-webfont.woff') format('woff'), url('../font/brandon_reg-webfont.ttf') format('truetype'), url('../font/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tisa';
+    src: url('../font/tisaot-webfont.eot');
+    src: url('../font/tisaot-webfont.eot?#iefix') format('embedded-opentype'), url('../font/tisaot-webfont.woff') format('woff'), url('../font/tisaot-webfont.ttf') format('truetype'), url('../font/tisaot-webfont.svg#tisaotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('../font/icomoon.eot?-sqtf1i');
+    src: url('../font/icomoon.eot?#iefix-sqtf1i') format('embedded-opentype'), url('../font/icomoon.woff?-sqtf1i') format('woff'), url('../font/icomoon.ttf?-sqtf1i') format('truetype'), url('../font/icomoon.svg?-sqtf1i#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-nav-icon-alert:before {
+    content: "\e690";
+}
+.icon-nav-icon-help:before {
+    content: "\e691";
+}
+.icon-nav-icon-upgrade:before {
+    content: "\e692";
+}
+.icon-nav-icon-user:before {
+    content: "\e693";
+}
+.icon-full-gage:before {
+    content: "\e600";
+}
+.icon-list:before {
+    content: "\e601";
+}
+.icon-check-2:before {
+    content: "\e602";
+}
+.icon-headset:before {
+    content: "\e60f";
+}
+.icon-check:before {
+    content: "\f00c";
+}
+.icon-refresh:before {
+    content: "\f021";
+}
+.icon-times-circle:before {
+    content: "\f057";
+}
+.icon-pencil:before {
+    content: "\e608";
+}
+.modal-content {
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+button {
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+}
+.step_number {
+    color: #fff;
+    font-size: 22px;
+    @include border-radius(50%);
+    background-color: #8dc63f;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+h1 {
+    font-size: 43px;
+    margin: 0px 0 20px 0;
+    font-family: 'brandon_light', helvetica, arial, sans-serif;
+    color: #666c6f;
+    font-weight: normal;
+}
+h3 {
+    font-size: 24px;
+    margin: 0px 0 20px 0;
+    font-family: 'robotolight', arial, sans-serif;
+    color: #333333;
+    font-weight: normal;
+}
+.bodyCopy {
+    font-family: 'tisa', arial, sans-serif;
+    font-size: 22px;
+    color: #8E8E8E;
+    line-height: 1.5;
+}
+p {
+    font-family: 'tisa', Georgia, Times New Roman, serif;
+    color: #444444;
+    line-height: 1.5;
+    margin: 0px 0 20px 0;
+}
+.center {
+    text-align: center;
+}
+.stepOneWrapper h3 {
+    margin: 30px 0 20px 0;
+    line-height: 32px;
+}
+.subNumberStep {
+    margin-left: 45px;
+}
+input[type="radio"] {
+    display: none;
+    & + label {
+        display: block;
+        position: relative;
+        height: 15px;
+        line-height: 14px;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #444444;
+        background-size: 14px 29px;
+        background-repeat: no-repeat;
+        background-position: 0 1px;
+        background-image: url(../img/radio-2.svg);
+    }
+    &:checked + label {
+        background-position: 0 -15px;
+    }
+}
+input[type="checkbox"] {
+    display: none;
+    & + label {
+        display: block;
+        position: relative;
+        height: 15px;
+        line-height: 14px;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #444444;
+        background-size: 14px 29px;
+        background-repeat: no-repeat;
+        background-position: 0 1px;
+        background-image: url(../img/checkbox-2.svg);
+    }
+    &:checked + label {
+        background-position: 0 -15px;
+    }
+    .toggleSwitches & + label {
+        display: block;
+        position: relative;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 65px;
+        margin-bottom: 13px;
+        cursor: pointer;
+        color: #444444;
+        background-size: 55px 56px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: url(../img/on-off-switch.svg);
+    }
+    .toggleSwitches &:checked + label {
+        background-position: 0 -30px;
+    }
+}
+label {
+    color: #444444;
+    font-weight: normal;
+    font-size: 16px;
+}
+.btn-primaryAction {
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 10px 16px;
+    font-family: 'brandon', arial, sans-serif;
+    background: #21A800;
+    @include border-radius(6px);
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-variant: normal;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+.btn-primaryAction:hover {
+    background: #1C8F00;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.btn-primaryAction:active {
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.btn-Regular {
+    padding: 10px;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.btn-Regular:hover {
+    border-color: #8430a6;
+    color: #8430a6;
+    text-decoration: none;
+}
+.btn-Regular.active, .btn-Regular.active:focus, .btn-Regular:active, .btn-Regular:focus {
+    background: #8430a6;
+    color: #FFFFFF;
+    border-color: #45296c;
+}
+.btn-link {
+    color: #8430A6;
+    border: none;
+}
+.table .btn-link {
+    padding: 0 10px 0 0;
+}
+.btn-link:hover, .btn-link.active, .btn-link:active, .btn-link.active:focus {
+    color: #8430A6;
+    background: transparent;
+    outline: 0;
+    text-decoration: none;
+    outline: thin dotted \9;
+    border: none;
+    /* IE6-9 */
+    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+}
+.btn-upgradePro {
+    color: #ff6b0b;
+    border-color: #ff6b0b;
+    background-color: transparent;
+    font-family: arial, sans-serif;
+    margin: 0 0 4px 10px;
+    font-weight: bold;
+}
+.btn-upgradePro:hover {
+    color: #ffffff;
+    background: #ff6b0b;
+    font-family: arial, sans-serif;
+    margin: 0 0 4px 10px;
+}
+.lateralSelector .btn {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius: 4px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.lateralSelector .btn:hover {
+    border-color: #8430a6;
+}
+.lateralSelector .active, .lateralSelector .active:focus {
+    background: #8430a6;
+    color: #FFFFFF;
+    border-color: #45296c;
+}
+/* Messages placeholder bg */
+
+.sampleBg {
+    margin: 0 auto;
+}
+/* Modals */
+
+.resellerDemo .modal-dialog {
+    width: 600px;
+}
+.modal-content {
+    border: none;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+}
+.modal-header {
+    min-height: 16.428571429px;
+    padding: 14px;
+    border-bottom: none;
+    background: #6F1795;
+    border-radius: 4px 4px 0 0;
+}
+.modal-title {
+    font-family: 'brandon_light', arial, sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 1;
+}
+.modal-footer {
+    padding: 0px 20px 20px;
+    margin-top: 0px;
+    border-top: none;
+}
+.modal-footer .cancel {
+    font-size: 16px;
+    color: #818181;
+}
+.modal .close {
+    /* text-shadow: 0 1px 0 #FFF; */
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+.modal .close .closeCircle {
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+.modal .close:hover .closeCircle {
+    fill: #450E5D;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+.modal-body {
+    padding: 30px;
+}
+.modalCallBack .modal-body {
+    padding-bottom: 10px;
+}
+.modal-body p, .modal .media-body p {
+    color: #444444;
+    font-size: 22px;
+}
+.modal .media-body .subInfo {
+    color: #818181;
+    font-size: 16px;
+}
+.modal .modal-body h4, .modal .modal-footer h4 {
+    font-family: 'roboto-meduim', arial, sans-serif;
+    color: #444444;
+    font-size: 18px;
+}
+.modal .media-heading {
+    font-family: 'roboto', arial, sans-serif;
+    color: #6F1795;
+    font-size: 27px;
+}
+/* Success Messaging */
+
+.successMessage {
+    width: 475px;
+    margin: 40px auto 0;
+}
+.successMessage h1 {
+    font-family: 'brandon_light';
+    font-size: 40px;
+    margin: 0 0 30px 0;
+}
+.successMessage h1 .type {
+    color: #818181;
+}
+.successMessage h1 .success {
+    color: #3FAE29;
+}
+.successMessage h1 .icon-check2 {
+    font-size: 43px;
+    position: relative;
+    top: 5px;
+}
+.successMessage p {
+    font-family: 'tisa';
+    font-size: 18px;
+    color: #333333;
+}
+.successMessage p .time {
+    color: #6F1795;
+}
+/* Boostrap Select - custom select dropdown styling */
+
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*="span"] {
+    margin: 10px 0;
+}
+.bootstrap-select .btn-default:hover, .bootstrap-select .btn-default:focus, .bootstrap-select .btn-default:active, .bootstrap-select .btn-default.active, .bootstrap-select .open .dropdown-toggle.btn-default {
+    color: #8430a6;
+    background-color: transparent;
+    border-color: #8430a6;
+}
+.bootstrap-select .btn-default:hover .caret, .bootstrap-select .btn-default:focus .caret, .bootstrap-select .btn-default:active .caret, .bootstrap-select .btn-default.active .caret, .bootstrap-select .open .dropdown-toggle.btn-default .caret {
+    border-top-color: #8430A6;
+}
+/* modal select overide */
+
+.specialPicker .media, .specialPicker .media .media-body {
+    overflow-y: visible!important;
+}
+.specialPicker .art {
+    float: left;
+    margin: 0 20px 107px
+}
+.specialPicker .art .icon-list {
+    font-size: 67px;
+    color: #808080;
+}
+.specialPicker .content {
+    margin: 0 0 20px 0
+}
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a i.check-mark {
+    margin-top: 6.5px;
+}

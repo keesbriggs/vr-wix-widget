@@ -6,16 +6,20 @@ class AppController < ActionController::Base
   before_filter :require_instance
   before_filter :get_request_key
 
-  skip_before_filter :require_instance, :only => :savetoken
-  skip_before_filter :get_request_key, :only => :savetoken
+  skip_before_filter :require_instance, :only => [:savetoken, :preview]
+  skip_before_filter :get_request_key, :only => [:savetoken, :preview]
 
   def widget
     # this loads first, before settings page.
     # let's create a widget object here.
     @widget = @widget || Widget.create({ comp_id: params[:compId], instance_id: params[:parsed_instance][:instance_id] })
     session[:widget_id] = @widget.id
-    value = Settings.find_or_create_by_key(@key).value || '{}'
-    @settings = value.html_safe
+    #value = Settings.find_or_create_by_key(@key).value || '{}'
+    #@settings = value.html_safe
+    
+    # Return the properties from the Widget class instead of Settings class
+    # TODO: this needs testing on wix editor, upon failure replace with the couple of commented lines above
+    @settings = @widget.to_json.html_safe
   end
   
   def settings
@@ -24,7 +28,12 @@ class AppController < ActionController::Base
     # - is the user authenticated against oauth?
     # - if so, what are their contact lists?
     # - which contact list will the user want customers to sign up with
-    value = Settings.find_or_create_by_key(@key).value || '{}'
+    #value = Settings.find_or_create_by_key(@key).value || '{}'
+    #@settings = value.html_safe
+
+    # Return the properties from the Widget class instead of Settings class
+    # TODO: this needs testing on wix editor, upon failure replace with the couple of commented lines above
+    value = Widget.find_or_create_by_comp_id_and_instance_id(@comp_id, @instance_id).to_json
     @settings = value.html_safe
   end
   
@@ -70,15 +79,16 @@ class AppController < ActionController::Base
   
   def get_request_key
     @key = @instance['instance_id'] + ':'
+    @instance_id = @instance['instance_id']
     
     if (params[:origCompId])
       @key = @key + params[:origCompId]
+      @comp_id = params[:origCompId]
     else
       @key = @key + params[:compId]
+      @comp_id = params[:compId]
     end
     @key
   end
   
 end
-
-
