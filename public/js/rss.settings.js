@@ -116,7 +116,8 @@ function bindEvents () {
 
 function callVROauth() {
     var app_key = "bruvqhpp3rsp7fwr9vysc8yz";
-    var redirect_uri = "https://vr-wix-widget.herokuapp.com/savetoken?compId=" + Wix.Utils.getOrigCompId();
+    // TODO: encode the redirect_uri per Esteban
+    var redirect_uri = "https://vr-wix-widget.herokuapp.com/savetoken";
     var url = "https://vrapi.verticalresponse.com/api/v1/oauth/authorize?client_id=" + app_key + "&redirect_uri=" + redirect_uri + "&compId=" + Wix.Utils.getOrigCompId();
     var position =  {origin: Wix.WindowOrigin.FIXED, placement: Wix.WindowPlacement.CENTER};
     var onClose = function(message) { console.log("popup closed", message) };

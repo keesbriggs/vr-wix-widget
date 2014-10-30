@@ -13,6 +13,7 @@ class AppController < ActionController::Base
     # this loads first, before settings page.
     # let's create a widget object here.
     @widget = @widget || Widget.create({ comp_id: params[:compId], instance_id: params[:parsed_instance][:instance_id] })
+    session[:widget_id] = @widget.id
     puts "KEES: inside widget - params are #{params.inspect}"
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
@@ -42,12 +43,10 @@ class AppController < ActionController::Base
     puts "KEES: inside SAVETOKEN - params are #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
-      comp_id = params[:compId]
-      puts "KEES: comp_id is #{comp_id.inspect}"
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
-      widget = @widget 
+      widget = Widget.find(session[:widget_id]) 
       puts "KEES: widget is #{widget.inspect}"
 
       conn = Faraday.new(:url => 'https://vrapi.verticalresponse.com') do |c|
@@ -59,7 +58,7 @@ class AppController < ActionController::Base
       response = conn.post "/api/v1/oauth/access_token", { 
         client_id: client_id, 
         client_secret: client_secret, 
-        code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken?compId=#{comp_id}" 
+        code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" # TODO: encode the redirect_uri per Esteban
       }
       response_json = JSON.parse(response.body)
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
