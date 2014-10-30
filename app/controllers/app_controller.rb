@@ -28,6 +28,7 @@ class AppController < ActionController::Base
     # - is the user authenticated against oauth?
     # - if so, what are their contact lists?
     # - which contact list will the user want customers to sign up with
+
     #value = Settings.find_or_create_by_key(@key).value || '{}'
     #@settings = value.html_safe
 
@@ -65,6 +66,7 @@ class AppController < ActionController::Base
         code: @auth_code, redirect_uri: "https://vr-wix-widget.herokuapp.com/savetoken" # TODO: encode the redirect_uri per Esteban
       }
       response_json = JSON.parse(response.body)
+
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
       session[:user_id] = user.id
       widget.update_attributes!(user_id: user.id)
