@@ -14,13 +14,11 @@ class AppController < ActionController::Base
     # let's create a widget object here.
     @widget = @widget || Widget.create({ comp_id: params[:compId], instance_id: params[:parsed_instance][:instance_id] })
     session[:widget_id] = @widget.id
-    puts "KEES: inside widget - params are #{params.inspect}"
     value = Settings.find_or_create_by_key(@key).value || '{}'
     @settings = value.html_safe
   end
   
   def settings
-    puts "KEES: inside settings - params are #{params.inspect}"
     @instance = params[:instance]
     # we need to know a few things:
     # - is the user authenticated against oauth?
@@ -31,7 +29,6 @@ class AppController < ActionController::Base
   end
   
   def settingsupdate
-    puts "KEES: inside settingsupdate - params are #{params.inspect}"
     @settings = Settings.find_or_create_by_key(@key)
     @settings.update_attributes(:value => params[:settings])
     
@@ -40,14 +37,12 @@ class AppController < ActionController::Base
 
   def savetoken
 
-    puts "KEES: inside SAVETOKEN - params are #{params.inspect}"
     if params[:code]
       # we need to return to this page as other pages are unauthorized.
       client_id = "bruvqhpp3rsp7fwr9vysc8yz"
       client_secret = "T4skBaDmAfkJkZjFg9jbfYHR" 
       @auth_code = params[:code]
       widget = Widget.find(session[:widget_id]) 
-      puts "KEES: widget is #{widget.inspect}"
 
       conn = Faraday.new(:url => 'https://vrapi.verticalresponse.com') do |c|
         c.use Faraday::Request::UrlEncoded  
@@ -62,7 +57,8 @@ class AppController < ActionController::Base
       }
       response_json = JSON.parse(response.body)
       user = User.create({ vr_user_id: response_json['user_id'], access_token: response_json['access_token'] })
-      widget.update_attributes(user_id: user.id)
+      session[:user_id] = user.id
+      widget.update_attributes!(user_id: user.id)
     end
   end
 
