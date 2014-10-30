@@ -4,9 +4,15 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore all logfiles.
+# Ignore all logfiles
 /log/*.log
 /log/*.log.gz
+# Ignore all tmp files
+/tmp
+/tmp/*
+# Ignore db schema
+/db/schema.rb
+# Ignore .DS_Store files
 .DS_Store
 # Ignore application.rb (for secret key misconfigurations)
 config/application.rb

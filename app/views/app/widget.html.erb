@@ -7,15 +7,12 @@
     <link type="text/css" href="/css/rss.widget.css" rel="stylesheet">
     <link type="text/css" href="/external_modules/scrollbar/css/jquery.tinyscrollbar.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
 </head>
 <body>
 
 <div class="widget-body">
-    <div class="widget-header">
-        <div class="main-title" id="feedTitle"></div>
-    </div>
-
-    <!-- NICK WIDGET -->
     <div class="suf suf-flight">
         <div class="suf-wrapper">
             <div class="suf-header hover-highlight placeholder" id="suf-header" style="position: relative">
@@ -44,38 +41,25 @@
             <div class="suf-footer hover-highlight" data-bindattr-170="170">
                 <div class="placeholder" id="suf-footer">
                     <span>Powered by</span>
-                    <img src="img/logos/long-logo-color.svg" width="139" height="26.7" />
+                    <img src="assets/logos/long-logo-color.svg" width="139" height="26.7" />
                 </div>
             </div>
         </div>
     </div>
-    <!-- NICK WIDGET-->
-
-
-    
-    <!-- <div class="overview">
-        <div class="feed-container" id="feedEntries"></div>
-    </div> -->
 </div>
-
-<!--script id="feed" type="text/x-handlebars-template">
-    <a class="entry-link" href="{{link}}" target="_blank">
-        <div class="feed">
-
-            <div class="title">{{title}}</div>
-            <div class="content"><p>{{content}}</p></div>
-        </div>
-    </a>
-</script-->
 
 <script type="text/javascript">
     var newSettings = <%= @settings %>;
 </script>
-
+<!-- 
+Commenting this out since jquery-rails gem adds jquery to asset pipeline
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+-->
 <script type="text/javascript" src="//sslstatic.wix.com/services/js-sdk/1.35.0/js/Wix.js"></script>
+<!-- Are we using handlebars at all? Maybe is it needed to run Wix SDK? -->
 <script type="text/javascript" src="/js/handlebars.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
+<!-- Is this needed to run Wix SDK? -->
 <script type="text/javascript" src="/external_modules/scrollbar/js/jquery.tinyscrollbar.js"></script>
 <script type="text/javascript" src="/js/rss.widget.js"></script>
 </body>

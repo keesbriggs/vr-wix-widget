@@ -1,6 +1,10 @@
 /**
  * This function init the settings object with default values or with values that were saved in the DB
  */
+ /**
+   This will be replaced with the default settings from the db
+   TODO: Rewrite this with the new Widget class properties
+ */
 function applySettings() {
     // Colors
     rssModel.settings.textColor = rssModel.settings.textColor ||  "#000000";
