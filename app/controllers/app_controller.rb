@@ -28,6 +28,25 @@ class AppController < ActionController::Base
     # - is the user authenticated against oauth?
     # - if so, what are their contact lists?
     # - which contact list will the user want customers to sign up with
+
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+
+      conn = Faraday.new(:url => 'https://vrapi.verticalresponse.com') do |c|
+        c.use Faraday::Request::UrlEncoded  
+        c.use Faraday::Response::Logger     
+        c.use Faraday::Adapter::NetHttp    
+      end
+
+      response = conn.get do |req|
+        req.url "/api/v1/lists"
+        req.headers['Authorization'] = "Bearer #{@user.access_token}"
+      end
+      response_json = JSON.parse(response.body)
+      puts "KEES: inside SETTINGS - response_json is #{response_json}"
+    end      
+
+    value = Settings.find_or_create_by_key(@key).value || '{}'
     #value = Settings.find_or_create_by_key(@key).value || '{}'
     #@settings = value.html_safe
 
