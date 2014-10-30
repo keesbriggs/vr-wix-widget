@@ -10,6 +10,6 @@ RssFeedRails::Application.routes.draw do
 
   match "/authenticate" => "app#authenticate"
 
-  match "/savetoken" => "app#savetoken" # was oauth#savetoken
+  match "/savetoken" => "app#savetoken" 
 
 end
