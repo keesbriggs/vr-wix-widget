@@ -9,6 +9,9 @@
 /log/*.log.gz
 # Ignore all tmp files
 /tmp
+/tmp/*
+# Ignore db schema
+/db/schema.rb
 # Ignore .DS_Store files
 .DS_Store
 # Ignore application.rb (for secret key misconfigurations)
