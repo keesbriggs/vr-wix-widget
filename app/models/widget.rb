@@ -13,6 +13,7 @@ class Widget < ActiveRecord::Base
   validates :instance_id, :comp_id, presence: true
   validates :header_text, :subheader_text, length: { maximum: 100 }
   validates :sign_up_button_text, length: { maximum: 100 }
+  before_create :set_default_header_text
 
   RETURN_VALUES = [:widget_background_color, :widget_height, :widget_width, :header_text, :header_font_type, :header_font_size,
                    :header_font_color, :header_alignment, :subheader_text, :subheader_font_type, :subheader_font_size, 
@@ -30,4 +31,11 @@ class Widget < ActiveRecord::Base
   end
 
   # TODO: build a parsing method that allows users to actually change the values of the props according to the settings chosen in Wix editor
+
+  private
+
+  def set_default_header_text
+    # Problems happen when trying to set a column default value with a string that has single quotes =/
+    self.header_text = "Don't Miss Out"
+  end
 end
