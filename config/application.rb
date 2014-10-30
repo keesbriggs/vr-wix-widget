@@ -62,6 +62,6 @@ module RssFeedRails
     config.assets.version = '1.0'
 
     config.middleware.use Wix::Apps::SignedInstanceMiddleware, 
-      secured_paths:['/settings', '/widget', '/app/settingsupdate'], secret_key: 'c82ef042-6c35-4ed6-a438-84cdc2a7c119'
+      secured_paths:['/settings', '/widget', '/app/settingsupdate'], secret_key: 'efb99955-766f-47b2-b4e3-3247350f796f'
   end
 end
