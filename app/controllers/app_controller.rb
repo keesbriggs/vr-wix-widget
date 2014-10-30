@@ -46,14 +46,7 @@ class AppController < ActionController::Base
       puts "KEES: inside SETTINGS - response_json is #{response_json}"
     end      
 
-    value = Settings.find_or_create_by_key(@key).value || '{}'
-    #value = Settings.find_or_create_by_key(@key).value || '{}'
-    #@settings = value.html_safe
-
-    # Return the properties from the Widget class instead of Settings class
-    # TODO: this needs testing on wix editor, upon failure replace with the couple of commented lines above
     value = Widget.find_or_create_by_comp_id_and_instance_id(@comp_id, @instance_id).to_json
-
     @settings = value.html_safe
   end
   
