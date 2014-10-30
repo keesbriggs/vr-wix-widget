@@ -1,0 +1,115 @@
+.suf.suf-flight {
+    .suf-wrapper {
+        //width: 70%;
+        margin: 0px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        padding: 20px 0 0 0;
+    }
+    .suf-header {
+        font-family: Arial, sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 0 40px;
+        text-align: center;
+    }
+    .suf-subheader {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        padding: 0 40px;
+        text-align: center;
+    }
+    .errorMessage {
+    	color: #DA0000;
+    	text-align: center;
+    	padding: 0 20px;
+    }
+    .successMessage {
+    	padding: 0 40px 40px 40px;
+    	text-align: center;
+    	color: #3FAE29;
+    }
+    .suf-fields {
+        ul {
+            list-style: none;
+            padding: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        label {
+            //font-family: Georgia, serif;
+            font-size: 14px;
+            display: block;
+            float: none;
+            padding-bottom: 5px;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            line-height: 100%;
+        }
+        input[type=text] {
+            margin-bottom: 5px;
+            width: 100%;
+            display: block;
+            height: 40px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            background-image: none;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+    }
+    .suf-submit {
+        background-color: #d7e6f0;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 20px 20px 0 20px;
+    }
+    .suf-submit button {
+        font-weight: normal;
+        color: #ffffff;
+        line-height: 1.4;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid #357ebd;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        background-color: #6495ce;
+        height: 60px;
+        font-size: 2em;
+        font-family: Arial, sans-serif;
+        width: 80%;
+        text-align: center;
+    }
+    .suf-footer {
+        background-color: #d7e6f0;
+        padding: 20px 40px 22px 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.protoNavigation {
+	margin: 20px 10px 10px 10px;
+	.note {
+		color: #999999;
+	}
+}

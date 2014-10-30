@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="/css/rss.widget.css" rel="stylesheet">
     <link type="text/css" href="/external_modules/scrollbar/css/jquery.tinyscrollbar.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -12,29 +15,41 @@
         <div class="main-title" id="feedTitle"></div>
     </div>
 
-        <!-- BEGIN EMAIL FORM ADDS - KEES -->
-
-        <form action='#' method='post'>
-            <div style="display: none;">
-                Please correct the indicated fields.
+    <!-- NICK WIDGET -->
+    <div class="suf suf-flight">
+        <div class="suf-wrapper">
+            <div class="suf-header hover-highlight placeholder" id="suf-header" style="position: relative">
+                <%= @settings.header_text %>
             </div>
-            <div id='feed'>
-                <div class="content feedElements" id="feedEntries">
-                    <p>
-                        Email Address
-                        <span>
-                            *
-                        </span>
-                    </p>
+
+            <div class="suf-subheader hover-highlight placeholder" id="suf-subheader">
+                <%= @settings.subheader_text %>
+            </div>
+
+            <div class="suf-fields">
+                <ul>
+                    <li>
+                        <label>
+                            <span id="i18n-109">Email Address</span>
+                        </label>
+                        <input type="text" name="email_address">
+                    </li>
+                </ul>
+            </div>
+            <div class="suf-submit">
+                <button>
+                    <%= @settings.sign_up_button_text %>
+                </button>
+            </div>
+            <div class="suf-footer hover-highlight" data-bindattr-170="170">
+                <div class="placeholder" id="suf-footer">
+                    <span>Powered by</span>
+                    <img src="assets/img/logos/long-logo-color.svg" width="139" height="26.7" />
                 </div>
-                <input name='contact[email_address]' type='text'>
             </div>
-            <div class='suf-submit'>
-                <button>Sign Up</button>
-            </div>
-        </form>
-
-        <!-- END EMAIL FORM ADDS - KEES -->
+        </div>
+    </div>
+    <!-- NICK WIDGET-->
 
 
     
