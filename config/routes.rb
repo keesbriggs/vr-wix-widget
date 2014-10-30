@@ -4,9 +4,11 @@ RssFeedRails::Application.routes.draw do
 
   match "/widget" => "app#widget"
 
-  match '/settings' => "app#settings"
+  match "/preview" => "app#preview"
 
-  match '/app/settingsupdate' => "app#settingsupdate"
+  match "/settings" => "app#settings"
+
+  match "/app/settingsupdate" => "app#settingsupdate"
 
   match "/authenticate" => "app#authenticate"
 

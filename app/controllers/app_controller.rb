@@ -9,6 +9,12 @@ class AppController < ActionController::Base
   skip_before_filter :require_instance, :only => [:savetoken, :preview]
   skip_before_filter :get_request_key, :only => [:savetoken, :preview]
 
+  def preview
+    @widget = @widget || Widget.create({ comp_id: "test", instance_id: "test" })
+    @settings = @widget.to_json.html_safe
+    render 'widget'
+  end
+
   def widget
     # this loads first, before settings page.
     # let's create a widget object here.
