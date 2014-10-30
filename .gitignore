@@ -8,3 +8,5 @@
 /log/*.log
 /log/*.log.gz
 .DS_Store
+# Ignore application.rb (for secret key misconfigurations)
+config/application.rb
