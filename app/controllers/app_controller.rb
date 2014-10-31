@@ -48,7 +48,7 @@ class AppController < ActionController::Base
         req.url "/api/v1/lists"
         req.headers['Authorization'] = "Bearer #{@user.access_token}"
       end
-      response_json = JSON.parse(response.body)
+      response_json = JSON.parse(response.body, :symbolize_names => true)
 
       puts "KEES: inside SETTINGS - response_json is #{response_json}"
       
