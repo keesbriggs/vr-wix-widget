@@ -59,7 +59,6 @@
             <p>VR List to send subscribers to</p>
             <select>
                 <% @lists.each do |list| %>
-                <% foo.each do |bar| %>
                     <li><%=h list.public_name %></li>
                 <% end %>
             </select>
