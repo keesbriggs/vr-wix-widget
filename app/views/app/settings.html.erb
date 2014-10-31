@@ -57,7 +57,7 @@
             <p>VR List to send subscribers to</p>
             <select>
                 <% @lists.each do |list| %>
-                    <li><%=h list.public_name %></li>
+                    <li><%=h list.name %></li>
                 <% end %>
             </select>
         </div>
