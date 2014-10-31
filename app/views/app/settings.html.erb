@@ -56,10 +56,10 @@
         <div class="feature">
             <p>VR List to send subscribers to</p>
             <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <% @lists.each do |list| %>
+                <% foo.each do |bar| %>
+                    <li><%=h list.public_name %></li>
+                <% end %>
             </select>
         </div>
     </div>
