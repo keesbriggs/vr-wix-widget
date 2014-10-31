@@ -49,12 +49,12 @@ class AppController < ActionController::Base
         req.headers['Authorization'] = "Bearer #{@user.access_token}"
       end
       response_json = JSON.parse(response.body)
+
       puts "KEES: inside SETTINGS - response_json is #{response_json}"
+      
       @lists = @lists || []
-      if @lists == []
-        response_json["items"].each do |list|
-          @lists << List.new list.attributes
-        end 
+      response_json["items"].each do |list|
+        @lists << List.new list.attributes
       end
       puts "KEES: inside SETTINGS - @lists is #{@lists.inspect}"
     end      
