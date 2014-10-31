@@ -44,6 +44,12 @@ class AppController < ActionController::Base
       end
       response_json = JSON.parse(response.body)
       puts "KEES: inside SETTINGS - response_json is #{response_json}"
+      @lists = @lists || []
+      response_json["items"].each do |list|
+        @lists << List.new list.attributes
+      end if @lists == []
+
+      end
     end      
 
     value = Widget.find_or_create_by_comp_id_and_instance_id(@comp_id, @instance_id).to_json
