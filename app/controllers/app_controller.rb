@@ -54,7 +54,7 @@ class AppController < ActionController::Base
       
       @lists = @lists || []
       response_json["items"].each do |list|
-        @lists << List.new list.attributes
+        @lists << List.new list[:attributes]
       end
       puts "KEES: inside SETTINGS - @lists is #{@lists.inspect}"
     end      
