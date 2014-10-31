@@ -54,8 +54,7 @@ class AppController < ActionController::Base
       response_json["items"].each do |list|
         @lists << List.new list.attributes
       end if @lists == []
-
-      end
+      puts "KEES: inside SETTINGS - @lists is #{@lists.inspect}"
     end      
 
     value = Widget.find_or_create_by_comp_id_and_instance_id(@comp_id, @instance_id).to_json
