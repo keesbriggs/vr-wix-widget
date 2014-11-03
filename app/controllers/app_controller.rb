@@ -11,7 +11,7 @@ class AppController < ActionController::Base
 
   # TODO: Intended for dev env only, delete this and its route when not needed
   def preview_widget
-    @widget = @widget || Widget.create({ comp_id: "test", instance_id: "test" })
+    @widget = Widget.find_or_create_by_comp_id_and_instance_id("test", "test")
     @settings = @widget.to_json.html_safe
     render 'widget'
   end

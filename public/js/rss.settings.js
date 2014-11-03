@@ -244,7 +244,8 @@ function updateSettings(settingsJson) {
     $.ajax({
         'type': 'post',
         'url': "/app/settingsupdate?instance=" + getQueryParameter('instance'),
-        //When testing in dev env use: 'url': '/preview_update_settings',
+        //When testing in dev env use: 
+        //'url': '/preview_update_settings',
         'dataType': "json",
         'contentType': 'application/json; chatset=UTF-8',
         'data': JSON.stringify({compId: Wix.Utils.getOrigCompId(), settings: settingsStr}),

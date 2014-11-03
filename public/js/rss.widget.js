@@ -5,7 +5,7 @@ var _rssWidget = (function() {
 
     // Property for containing widget elements
     var sp = {
-        widgetBody: $('.widget-body'),
+        widgetBody: $('.suf-wrapper'),
         feedElement: $('#feedEntries'),
         feedElements: $('.feedElements'),
         title : $('#feedTitle'),
@@ -130,13 +130,19 @@ var _rssWidget = (function() {
     function applySettings() {
         sp.title.css('color', rssModel.settings.titleTextColor);
 
+        // Leaving demo code commented as reference
+        
         // Set widget background color - check if transparent is checked
-        var widgetBackgroundColor = rssModel.settings.widgetBcgColor;
-        if ( rssModel.settings.widgetBcgCB){
-             var opacityVal = rssModel.settings.widgetBcgSlider;
-             widgetBackgroundColor = convertHexToRgba(widgetBackgroundColor, opacityVal);
-        }
-        sp.widgetBody.css('background-color', widgetBackgroundColor);
+        //var widgetBackgroundColor = rssModel.settings.widgetBcgColor;
+        //if ( rssModel.settings.widgetBcgCB){
+        //     var opacityVal = rssModel.settings.widgetBcgSlider;
+        //     widgetBackgroundColor = convertHexToRgba(widgetBackgroundColor, opacityVal);
+        //}
+        //sp.widgetBody.css('background-color', widgetBackgroundColor);
+
+        // Set widget background color
+        sp.widgetBody.css('background-color', rssModel.settings.widget_background_color);
+
 
         // Set feed background color - check if transparent is checked
         var feedBackgroundColor = rssModel.settings.feedBcgColor;
