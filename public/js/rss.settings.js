@@ -15,10 +15,13 @@ var sp ={
  * Init the color pickers with a start color, a one that was saved in the DB or a default one
  */
 function initColorPickers() {
+    // TODO: delete this once we remove those settings in the view
     $('#titleTextColor').ColorPicker({startWithColor : rssModel.settings.titleTextColor});
     $('#textColor').ColorPicker({startWithColor : rssModel.settings.textColor});
     $('#widgetBcgColor').ColorPicker({startWithColor : rssModel.settings.widgetBcgColor});
     $('#feedBcgColor').ColorPicker({startWithColor : rssModel.settings.feedBcgColor});
+
+    $('#widget_background_color').ColorPicker();
 }
 
 /**
@@ -33,6 +36,18 @@ function initSliders() {
     sp.sliders['feedBcgCB'] = $('#feedBcgSlider').Slider({
                                     type: "Value",
                                     value: rssModel.settings.feedBcgSlider
+                                });
+    sp.sliders['widget_height'] = $("#widget_height").Slider({
+                                    type: "Value",
+                                    minValue: 0,
+                                    maxValue: 500,
+                                    value: 0.5 // TODO: add a new prop for the percentage based
+                                });
+    sp.sliders['widget_width'] = $("#widget_width").Slider({
+                                    type: "Value",
+                                    minValue: 0,
+                                    maxValue: 380,
+                                    value: 0.5 // TODO: add a new prop for the percentage based
                                 });
 }
 
@@ -229,6 +244,7 @@ function updateSettings(settingsJson) {
     $.ajax({
         'type': 'post',
         'url': "/app/settingsupdate?instance=" + getQueryParameter('instance'),
+        //When testing in dev env use: 'url': '/preview_update_settings',
         'dataType': "json",
         'contentType': 'application/json; chatset=UTF-8',
         'data': JSON.stringify({compId: Wix.Utils.getOrigCompId(), settings: settingsStr}),

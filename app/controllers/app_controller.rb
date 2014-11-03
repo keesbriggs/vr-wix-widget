@@ -6,13 +6,30 @@ class AppController < ActionController::Base
   before_filter :require_instance
   before_filter :get_request_key
 
-  skip_before_filter :require_instance, :only => [:savetoken, :preview]
-  skip_before_filter :get_request_key, :only => [:savetoken, :preview]
+  skip_before_filter :require_instance, :only => [:savetoken, :preview_widget, :preview_settings, :preview_update_settings]
+  skip_before_filter :get_request_key, :only => [:savetoken, :preview_widget, :preview_settings, :preview_update_settings]
 
-  def preview
+  # TODO: Intended for dev env only, delete this and its route when not needed
+  def preview_widget
     @widget = @widget || Widget.create({ comp_id: "test", instance_id: "test" })
     @settings = @widget.to_json.html_safe
     render 'widget'
+  end
+
+  # TODO: Intended for dev env only, delete this and its route when not needed
+  def preview_settings
+    @lists = [] 
+    value = Widget.find_or_create_by_comp_id_and_instance_id("test", "test").to_json
+    @settings = value.html_safe
+    render 'settings'
+  end
+
+  # TODO: Intended for dev env only, delete this and its route when not needed
+  def preview_update_settings
+    widget = Widget.find_or_create_by_comp_id_and_instance_id("test", "test")
+    puts "calling update settings"
+    widget.update_settings(params[:settings])
+    render :json => {}, :status => 200
   end
 
   def widget
