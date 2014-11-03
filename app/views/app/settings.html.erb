@@ -58,7 +58,7 @@
         <% if @user %>
             <div class="logged_in_user">
                 <p>Logged in as:</p>
-                <p><%= @user.email %>
+                <p><%=h @user.email %></p>
             </div>
         <% end %>
         <div class="feature">
