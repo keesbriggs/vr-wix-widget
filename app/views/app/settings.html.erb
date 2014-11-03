@@ -55,6 +55,12 @@
     <!-- Lists -->
     <div class="box">
         <h3>Settings</h3>
+        <% if @user %>
+            <div class="logged_in_user">
+                <p>Logged in as:</p>
+                <p><%= @user.email %>
+            </div>
+        <% end %>
         <div class="feature">
             <p>VR List to send subscribers to</p>
             <select>
